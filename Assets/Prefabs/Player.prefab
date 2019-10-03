@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5179525925348828858}
   - component: {fileID: 542091541434404172}
+  - component: {fileID: 4656499732263550590}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -44,3 +45,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weight: 10
+--- !u!114 &4656499732263550590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290275073222663569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639630e508e00146bc16f722fa6adb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  smoothInput: 1
+  canMoveThroughWalls: 0
