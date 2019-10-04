@@ -4,37 +4,34 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private static string HORI_INPUT = "Horizontal";
+    private static string VERT_INPUT = "Vertical";
+
     [Tooltip("Units per second")]
     public float speed = 1.0f;
 
     [Header("Testing variables")]
-
     [SerializeField]
     private bool smoothInput = false;
-    [SerializeField]
-    private bool canMoveThroughWalls = false;
 
-    private static string HORI_INPUT = "Horizontal";
-    private static string VERT_INPUT = "Vertical";
-
-    //TODO: movement using rigidbody instead of transform?
+    private Rigidbody rBody; //it complains if you try to name this rigidbody
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.rBody = transform.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //TODO: double check what coordinates we're working with; this assumes x-z
-        Vector3 displacement = this.getInputVector() * this.speed * Time.deltaTime;
-        transform.position += displacement;
+        Vector3 movement = this.getInputVector() * this.speed;
+        this.rBody.velocity = movement;
     }
 
     /**
-     * Collects the player's movement inputs into a vector. Assumes that movement is along the X-Z plane.
+     * Collects the player's movement inputs into a vector, accounting for whether or not
+     * smooth input is requested. Assumes that movement is along the X-Z plane.
      **/
     private Vector3 getInputVector()
     {
