@@ -12,7 +12,47 @@ ModelImporter:
   - first:
       74: 8967749517121878288
     second: Camera|CameraAction.001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blush
+    second: {fileID: 2100000, guid: 2cc6a3989753d41fab4c7f08227ab15d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark Jean
+    second: {fileID: 2100000, guid: 2ba2c39c4973d4bfcaf79274d9956647, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: 96a9b009967be4c368616bfe6e95e4c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light Jean
+    second: {fileID: 2100000, guid: 2a5fa7c7c4e094c65bb37373793ba8f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 6d9c81fc6cfb342a98aed6cc9a27242a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt 1
+    second: {fileID: 2100000, guid: 1bf5c4059bf5d42a5af8294cddbb12b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt 2
+    second: {fileID: 2100000, guid: 816f6bd98deb64b6591b05354fcaa654, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 20a7a5f444ac543eeac52b3fadc80a19, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
