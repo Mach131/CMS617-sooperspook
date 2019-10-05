@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5322684346198931728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511112262312540660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09510184beb84460bd71fd3115d8256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuName: Put out
+  reverseMenuName: Turn on
 --- !u!1001 &6023233354989920934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10,22 +24,22 @@ PrefabInstance:
     - target: {fileID: 4299255513692855122, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_Name
-      value: Candle Sconce
+      value: Candle Sconce Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3469685700588852110, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3290114
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3469685700588852110, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.19352293
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3469685700588852110, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.8355784
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3469685700588852110, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
@@ -90,22 +104,22 @@ PrefabInstance:
     - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 13
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
@@ -115,32 +129,32 @@ PrefabInstance:
     - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_text
-      value: Candle Sconce
+      value: Candle Sconce Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_fontSize
-      value: 1.45
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 13
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
@@ -150,32 +164,32 @@ PrefabInstance:
     - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_text
-      value: Candle Sconce
+      value: Candle Sconce Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_fontSize
-      value: 1.45
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 13
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
@@ -185,32 +199,32 @@ PrefabInstance:
     - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_text
-      value: Candle Sconce
+      value: Candle Sconce Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_fontSize
-      value: 1.45
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 13
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
@@ -220,12 +234,29 @@ PrefabInstance:
     - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_text
-      value: Candle Sconce
+      value: Candle Sconce Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_fontSize
-      value: 1.45
+      value: 2.9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5156687164869827406, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: manualString
+      value: Candle Sconce Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 546609902650364548, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: menuName
+      value: Put Out
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 546609902650364548, guid: 92a40e02e2162784aad06000f163ed6c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 92a40e02e2162784aad06000f163ed6c, type: 3}
+--- !u!1 &7511112262312540660 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4299255513692855122, guid: 92a40e02e2162784aad06000f163ed6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6023233354989920934}
+  m_PrefabAsset: {fileID: 0}

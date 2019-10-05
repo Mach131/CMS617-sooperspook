@@ -12,15 +12,10 @@ public class DiegeticLabel : MonoBehaviour
     public GameObject otherSource;
     public string manualString;
 
-    private void Awake() {
-        otherSource = gameObject;
-        manualString = otherSource.name;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        manualString = otherSource.name;
     }
 
     // Update is called once per frame
@@ -42,8 +37,14 @@ public class DiegeticLabel : MonoBehaviour
             throw new System.Exception("Unhandled");
         }
 
-        foreach( TMPro.TextMeshPro tmp in textMeshes ) {
-            tmp.text = label;
+        if (textMeshes.Length > 0) {
+            foreach (TMPro.TextMeshPro tmp in textMeshes)
+            {
+                if (tmp != null)
+                {
+                    tmp.text = label;
+                }
+            }
         }
 
     }
