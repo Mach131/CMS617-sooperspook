@@ -42,6 +42,16 @@ public class Interactable : MonoBehaviour
         HideInteractionMenu();
     }
 
+    public HashSet<string> GetState()
+    {
+        HashSet<string> stateSet = new HashSet<string>();
+        foreach (Interaction interaction in GetComponents<Interaction>())
+        {
+            stateSet.Add(interaction.GetMenuName() + "." + interaction.GetState());
+        }
+        return stateSet;
+    }
+
     private void ShowButtonHint()
     {
         buttonHint.gameObject.SetActive(true);

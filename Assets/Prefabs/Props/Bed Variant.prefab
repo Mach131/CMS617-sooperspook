@@ -13,7 +13,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuName: Mess bed
+  baseState: Neat
+  activeState: Messy
+  fearSource: {fileID: 1225621671171040961}
   reverseMenuName: Make bed
+  reverseFearSource: {fileID: 1225621671171040961}
+--- !u!114 &1225621671171040961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358834930227219775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c81548a76c43498087536e5703c4b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6797330537944297170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,15 +257,15 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 3.2
       objectReference: {fileID: 0}
-    - target: {fileID: 5156687164869827406, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: manualString
-      value: Bed Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 546609902650364548, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: menuName
       value: Move Sheet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156687164869827406, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: manualString
+      value: Bed Variant
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 546609902650364548, guid: 92a40e02e2162784aad06000f163ed6c, type: 3}
@@ -257,6 +273,12 @@ PrefabInstance:
 --- !u!1 &7349590918864369024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4299255513692855122, guid: 92a40e02e2162784aad06000f163ed6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6797330537944297170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &358834930227219775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6534211148641182701, guid: 92a40e02e2162784aad06000f163ed6c,
     type: 3}
   m_PrefabInstance: {fileID: 6797330537944297170}
   m_PrefabAsset: {fileID: 0}

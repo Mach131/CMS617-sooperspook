@@ -6,6 +6,11 @@ using UnityEngine;
 public class Interaction : MonoBehaviour, IComparable<Interaction>
 {
     public string menuName;
+    public string baseState;
+    public string activeState;
+    public FearSource fearSource;
+
+    private bool activated = false;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -26,7 +31,20 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
 
     public virtual void DoInteraction()
     {
-        //Debug.Log("Doing " + GetMenuName());
+        activated = true;
+        fearSource.TriggerEffect();
+    }
+
+    public virtual string GetState()
+    {
+        if (activated)
+        {
+            return activeState;
+        }
+        else
+        {
+            return baseState;
+        }
     }
 
     public int CompareTo(Interaction other)

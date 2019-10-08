@@ -2086,6 +2086,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuName: Test
+  baseState: Inactive
+  activeState: Active
+  fearSource: {fileID: 0}
 --- !u!4 &1440524113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2231389132075766640, guid: 887870e176a2d4bf999f183138328295,

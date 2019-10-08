@@ -5,7 +5,9 @@ using UnityEngine;
 public class ToggleInteraction : Interaction
 {
     public string reverseMenuName;
-    private bool baseState = true;
+    public FearSource reverseFearSource;
+
+    private bool inActiveState = false;
 
     protected override void Start()
     {
@@ -14,19 +16,39 @@ public class ToggleInteraction : Interaction
 
     public override string GetMenuName()
     {
-        if (baseState)
+        if (inActiveState)
         {
-            return menuName;
+            return reverseMenuName;
         }
         else
         {
-            return reverseMenuName;
+            return menuName;
+        }
+    }
+
+    public override string GetState()
+    {
+        if (inActiveState)
+        {
+            return activeState;
+        }
+        else
+        {
+            return baseState;
         }
     }
 
     public override void DoInteraction()
     {
-        baseState = !baseState;
+        if (!inActiveState)
+        {
+            fearSource.TriggerEffect();
+        }
+        else
+        {
+            reverseFearSource.TriggerEffect();
+        }
+        inActiveState = !inActiveState;
         gameObject.GetComponentInChildren<InteractionMenu>().OnInteractionChange();
     }
 }

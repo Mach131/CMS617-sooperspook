@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7412559411545380565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875455485586747480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09510184beb84460bd71fd3115d8256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuName: Open Door
+  baseState: Closed
+  activeState: Open
+  reverseMenuName: Close Door
 --- !u!1001 &2039477091754699530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,5 +248,12 @@ PrefabInstance:
       propertyPath: manualString
       value: Single Door Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 546609902650364548, guid: 92a40e02e2162784aad06000f163ed6c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 92a40e02e2162784aad06000f163ed6c, type: 3}
+--- !u!1 &2875455485586747480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4299255513692855122, guid: 92a40e02e2162784aad06000f163ed6c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2039477091754699530}
+  m_PrefabAsset: {fileID: 0}
