@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364859076346894857}
   - component: {fileID: 7695775854571445055}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5403806286468802465}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6669557864075465701}
   - component: {fileID: 8512673057059573462}
   - component: {fileID: 3712348081867975623}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: -X Label (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 8835847211126036391}
   - component: {fileID: 8847421231803010988}
   - component: {fileID: 1198950472303107206}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: +X Label (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 4761567444458832454}
   - component: {fileID: 7996130811703689705}
   - component: {fileID: 4661506047256252399}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Prop Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 6748857581222712896}
   - component: {fileID: 546609902650364548}
   - component: {fileID: 5156687164869827406}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Prop Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 5934091364400991608}
   - component: {fileID: 5934091364400991615}
   - component: {fileID: 5934091364400991614}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: -Z Label (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1218319860969806603}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Fear Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 7207366618222926828}
   - component: {fileID: 5306690657773196309}
   - component: {fileID: 5482739810040780891}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: +Z Label (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   - component: {fileID: 6346975693782458028}
   - component: {fileID: 1295536319954232755}
   - component: {fileID: 4571157625746845336}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Button Hint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1140,7 +1140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4071690319054103863}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: UI Popups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1174,7 @@ GameObject:
   - component: {fileID: 7835011456598785993}
   - component: {fileID: 187662347343677793}
   - component: {fileID: 3441549598434751718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Interaction Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
