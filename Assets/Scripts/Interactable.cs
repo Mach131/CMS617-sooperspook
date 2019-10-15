@@ -92,14 +92,14 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals("Player") && !IsInteractionMenuActive()) {
+        if (other.CompareTag("Player") && !IsInteractionMenuActive()) {
             ShowButtonHint();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag.Equals("Player"))
+        if (other.CompareTag("Player"))
         {
             HideButtonHint();
             HideInteractionMenu();
