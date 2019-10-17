@@ -18,8 +18,8 @@ public class SphereFearSource : FearSource
         {
             if ((visitor.transform.position - transform.position).magnitude < sphereRadius)
             {
-                //TODO: apply fear
                 Debug.Log("Visitor in range!");
+                visitor.ApplyFear(fearWeight);
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class InteractionMenu : MonoBehaviour
 {
     public GameObject menuItemPrefab;
-    
+
     private List<Interaction> interactions = new List<Interaction>();
     private List<GameObject> menuItems = new List<GameObject>();
     private bool interactionListChanged = true;

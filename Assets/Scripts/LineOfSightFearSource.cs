@@ -14,8 +14,8 @@ public class LineOfSightFearSource : FearSource
             {
                 if (hit.collider.gameObject == visitor.gameObject && Vector3.Dot(visitor.transform.forward, rayDirection) < 0)
                 {
-                    //TODO: apply fear
                     Debug.Log("Saw visitor!");
+                    visitor.ApplyFear(fearWeight);
                 }
             }
         }

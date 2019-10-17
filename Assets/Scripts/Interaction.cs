@@ -10,12 +10,14 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
     public string activeState;
     public FearSource fearSource;
 
+    protected Interactable interactable;
+
     private bool activated = false;
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        
+        interactable = GetComponent<Interactable>();
     }
 
     // Update is called once per frame
