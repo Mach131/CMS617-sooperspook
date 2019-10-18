@@ -34,7 +34,7 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
     public virtual void DoInteraction()
     {
         activated = true;
-        fearSource.TriggerEffect();
+        fearSource.TriggerEffect(interactable);
     }
 
     public virtual string GetState()

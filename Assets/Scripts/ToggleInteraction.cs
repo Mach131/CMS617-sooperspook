@@ -42,11 +42,11 @@ public class ToggleInteraction : Interaction
     {
         if (!inActiveState)
         {
-            fearSource.TriggerEffect();
+            fearSource.TriggerEffect(interactable);
         }
         else
         {
-            reverseFearSource.TriggerEffect();
+            reverseFearSource.TriggerEffect(interactable);
         }
         inActiveState = !inActiveState;
         gameObject.GetComponentInChildren<InteractionMenu>().OnInteractionChange();

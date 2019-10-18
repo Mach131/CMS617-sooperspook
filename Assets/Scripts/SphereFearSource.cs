@@ -12,14 +12,13 @@ public class SphereFearSource : FearSource
         Gizmos.DrawWireSphere(transform.position, sphereRadius);
     }
 
-    public override void TriggerEffect()
+    public override void TriggerEffect(Interactable source)
     {
         foreach (VisitorController visitor in FindObjectsOfType<VisitorController>())
         {
             if ((visitor.transform.position - transform.position).magnitude < sphereRadius)
             {
-                Debug.Log("Visitor in range!");
-                visitor.ApplyFear(fearWeight);
+                visitor.ApplyFear(fearWeight, source, isJumpScare);
             }
         }
     }

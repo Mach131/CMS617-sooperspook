@@ -5,5 +5,6 @@ using UnityEngine;
 public abstract class FearSource : MonoBehaviour
 {
     public float fearWeight = 1;
-    public abstract void TriggerEffect();
+    public bool isJumpScare = false;
+    public abstract void TriggerEffect(Interactable source);
 }

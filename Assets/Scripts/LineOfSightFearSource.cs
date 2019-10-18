@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineOfSightFearSource : FearSource
 {
-    public override void TriggerEffect()
+    public override void TriggerEffect(Interactable source)
     {
         foreach(VisitorController visitor in FindObjectsOfType<VisitorController>())
         {
@@ -14,8 +14,7 @@ public class LineOfSightFearSource : FearSource
             {
                 if (hit.collider.gameObject == visitor.gameObject && Vector3.Dot(visitor.transform.forward, rayDirection) < 0)
                 {
-                    Debug.Log("Saw visitor!");
-                    visitor.ApplyFear(fearWeight);
+                    visitor.ApplyFear(fearWeight, source, isJumpScare);
                 }
             }
         }
