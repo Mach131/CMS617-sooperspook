@@ -11,7 +11,7 @@ public class VisitorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(CheckPropStates());
     }
 
     // Update is called once per frame
@@ -33,8 +33,28 @@ public class VisitorController : MonoBehaviour
         }
     }
 
-    //TODO: this code should also be called whenever the visitor notices a prop change, not just in ApplyFear
-    void ObserveState(Interactable interactable)
+    IEnumerator CheckPropStates()
+    {
+        while (true)
+        {
+            foreach (Interactable interactable in FindObjectsOfType<Interactable>())
+            {
+                RaycastHit hit;
+                Vector3 rayDirection = interactable.transform.position - transform.position;
+                if (Physics.Raycast(transform.position, rayDirection, out hit, Mathf.Infinity))
+                {
+                    Interactable hitInteractable = hit.collider.GetComponentInParent<Interactable>();
+                    if (hitInteractable != null && hitInteractable.gameObject == interactable.gameObject && Vector3.Dot(transform.forward, rayDirection) > 0)
+                    {
+                        ObserveState(interactable, false);
+                    }
+                }
+            }
+            yield return new WaitForSeconds(2 + Random.value); // Don't need to do this every frame
+        }
+    }
+
+    void ObserveState(Interactable interactable, bool causedByInteraction)
     {
         if (!states.ContainsKey(interactable))
         {
@@ -42,6 +62,10 @@ public class VisitorController : MonoBehaviour
         }
         else
         {
+            if (!causedByInteraction)
+            {
+                // TODO: this is the case where the player changes something without the visitor noticing, and the visitor notices later that something is off
+            }
             states[interactable] = interactable.GetState();
         }
     }
@@ -51,7 +75,7 @@ public class VisitorController : MonoBehaviour
         totalFear += fearAmount;
         if (source != null) // Can be player, which is not an Interactable
         {
-            ObserveState(source);
+            ObserveState(source, true);
         }
         if (isJumpScare)
         {
