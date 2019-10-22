@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3828802163063384854}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -8.330952, y: 6.0299063, z: -7.657474}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 100}
   m_Children:
   - {fileID: 2598189629308191659}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 8342600759104394620}
   - component: {fileID: 2111305256519792646}
   m_Layer: 0
-  m_Name: candle
+  m_Name: candle--w.holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
