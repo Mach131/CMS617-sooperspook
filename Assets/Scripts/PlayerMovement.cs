@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = this.getInputVector() * this.speed;
         this.rBody.velocity = movement;
+        if (movement.magnitude > 0.1f)
+        {
+            transform.rotation = Quaternion.LookRotation(movement, Vector3.up);
+        }
     }
 
     /**

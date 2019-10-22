@@ -92,8 +92,12 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && !IsInteractionMenuActive()) {
+        if (other.CompareTag("Player") && !IsInteractionMenuActive() && IsLooking(other.gameObject)) {
             ShowButtonHint();
+        }
+        if (other.CompareTag("Player") && IsButtonHintActive() && !IsLooking(other.gameObject))
+        {
+            HideButtonHint();
         }
     }
 
@@ -104,5 +108,10 @@ public class Interactable : MonoBehaviour
             HideButtonHint();
             HideInteractionMenu();
         }
+    }
+
+    private bool IsLooking(GameObject other)
+    {
+        return Vector3.Dot(other.transform.forward.normalized, (transform.position - other.transform.position).normalized) > 0.75f; // Corresponds to 45 deg either direction of straight
     }
 }
