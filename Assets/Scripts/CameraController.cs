@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
 
     private Vector3 cameraOffsetDirection = new Vector3(0, 0.85f, -0.5f);
-    private float cameraOffsetDistance = 8;
+    private float cameraOffsetDistance = 32;
     private float cameraOffsetDistanceMultiplier = 1;
     private float leadingFactor = 0.4f;
     private float followDelay = 0.2f;

@@ -287,6 +287,36 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4071690319054103863, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071690319054103863, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071690319054103863, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071690319054103863, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1218319860969806603, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515699822874305069, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92a40e02e2162784aad06000f163ed6c, type: 3}
 --- !u!4 &8149136345679055237 stripped

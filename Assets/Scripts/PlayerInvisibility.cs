@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class PlayerInvisibility : MonoBehaviour
 {
-    private MeshRenderer mr;
+    private MeshRenderer[] mrs;
 
     private bool isInvisible = true;
-    private Color baseColor;
 
     // Start is called before the first frame update
     void Start()
     {
-        mr = GetComponent<MeshRenderer>();
-        baseColor = mr.material.GetColor("_BaseColor");
+        mrs = GetComponentsInChildren<MeshRenderer>();
+
         if (isInvisible)
         {
-            mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
+            foreach (MeshRenderer mr in mrs)
+            {
+                Color baseColor = mr.material.GetColor("_BaseColor");
+                mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
+            }
         }
     }
 
@@ -32,14 +35,18 @@ public class PlayerInvisibility : MonoBehaviour
     void ToggleInvisibility()
     {
         isInvisible = !isInvisible;
-        if (isInvisible)
+        foreach (MeshRenderer mr in mrs)
         {
-            mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
-        }
-        else
-        {
-            CauseSpook();
-            mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a));
+            Color baseColor = mr.material.GetColor("_BaseColor");
+            if (isInvisible)
+            {
+                mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
+            }
+            else
+            {
+                CauseSpook();
+                mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a / 0.3f));
+            }
         }
     }
 
