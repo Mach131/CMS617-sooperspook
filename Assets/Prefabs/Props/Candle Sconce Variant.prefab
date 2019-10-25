@@ -128,31 +128,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candle Sconce Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.7250603
-      objectReference: {fileID: 0}
-    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 0.0000004172325
-      objectReference: {fileID: 0}
-    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 1.1687391
-      objectReference: {fileID: 0}
-    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.59372544
-      objectReference: {fileID: 0}
-    - target: {fileID: 5156687164869827406, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: manualString
-      value: Candle Sconce Variant
-      objectReference: {fileID: 0}
     - target: {fileID: 3469685700588852110, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -208,145 +183,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 21
+      propertyPath: m_Size.x
+      value: 1.7250603
       objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
+      propertyPath: m_Center.x
+      value: 0.0000004172325
       objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
+      propertyPath: m_Size.z
+      value: 1.1687391
       objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+    - target: {fileID: 6748857581222712896, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 3
+      propertyPath: m_Center.z
+      value: -0.59372544
       objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+    - target: {fileID: 5156687164869827406, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_text
+      propertyPath: manualString
       value: Candle Sconce Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 2.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_text
-      value: Candle Sconce Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 2.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_text
-      value: Candle Sconce Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 2.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_text
-      value: Candle Sconce Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 3595738251880035717, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
@@ -363,15 +223,160 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_text
+      value: Candle Sconce Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934091364400991614, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_text
+      value: Candle Sconce Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482739810040780891, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8835847211126036391, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8515699822874305069, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7207366618222926828, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_text
+      value: Candle Sconce Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198950472303107206, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_text
+      value: Candle Sconce Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3712348081867975623, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 546609902650364548, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}

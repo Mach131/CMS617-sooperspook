@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 6748857581222712896}
   - component: {fileID: 546609902650364548}
   - component: {fileID: 5156687164869827406}
+  - component: {fileID: 9125669081426294454}
   m_Layer: 12
   m_Name: Prop Placeholder
   m_TagString: Untagged
@@ -602,6 +603,20 @@ MonoBehaviour:
   - {fileID: 3712348081867975623}
   otherSource: {fileID: 4299255513692855122}
   manualString: Prop Placeholder
+--- !u!114 &9125669081426294454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299255513692855122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc7113f41e5f4d0f8ae2ff9e31f84e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visitorStandLocation: {x: 0, y: 0, z: 0}
+  visitorLookDirection: {x: 1, y: 0, z: 0}
 --- !u!1 &5934091364400991613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,8 +1170,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635623592180675373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 6.4, z: -0.5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 6346975693782458028}
   - {fileID: 7835011456598785993}

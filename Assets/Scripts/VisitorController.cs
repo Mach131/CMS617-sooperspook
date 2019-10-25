@@ -1,36 +1,60 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class VisitorController : MonoBehaviour
 {
+    public Transform exit;
+
     private Dictionary<Interactable, HashSet<string>> states = new Dictionary<Interactable, HashSet<string>>();
     private float totalFear = 0;
-    private float fearThreshold = 4.9f; //How much fear before a jump scare makes them leave
+    private float fearThreshold = 4.9f; // How much fear before a jump scare makes them leave
+
+    private NavMeshAgent agent;
+    private InterestItem currentInterestItem;
+    private float lastSwitchedInterestTimestamp = -1;
+    private float interestDuration = 15f; // How long a visitor stays interested in an object
 
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         StartCoroutine(CheckPropStates());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentInterestItem == null || Time.time - lastSwitchedInterestTimestamp > interestDuration)
+        {
+            GetNewInterestItem();
+            agent.destination = currentInterestItem.GetStandPosition();
+        }
+        if (agent.remainingDistance < 0.5f)
+        {
+            agent.ResetPath();
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentInterestItem.GetLookDirection(), Vector3.up), 0.1f);
+        }
     }
 
     void RunAway()
     {
-        //TODO: Set visitor to running away state
         if (totalFear >= fearThreshold)
         {
-            // Run out of building
+            agent.destination = exit.position;
         }
         else
         {
             // Run out of current room
         }
+    }
+
+    void GetNewInterestItem()
+    {
+        InterestItem[] items = FindObjectsOfType<InterestItem>();
+        currentInterestItem = items[(int)(Random.value * items.Length)];
+        lastSwitchedInterestTimestamp = Time.time;
     }
 
     IEnumerator CheckPropStates()
