@@ -18,11 +18,14 @@ public class VisitorController : MonoBehaviour
     private float startedObservingTimestamp = -1;
     private float interestDuration = 5f; // How long a visitor stays interested in an object
 
+    private float baseSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
         state = VisitorState.Idle;
         agent = GetComponent<NavMeshAgent>();
+        baseSpeed = agent.speed;
         StartCoroutine(CheckPropStates());
     }
 
@@ -34,6 +37,7 @@ public class VisitorController : MonoBehaviour
             GetNewInterestItem();
             agent.destination = currentInterestItem.GetStandPosition();
             state = VisitorState.MovingToObserve;
+            agent.speed = baseSpeed;
         }
         else if (state == VisitorState.MovingToObserve)
         {
@@ -43,6 +47,7 @@ public class VisitorController : MonoBehaviour
                 state = VisitorState.Observing;
                 startedObservingTimestamp = Time.time;
             }
+            agent.speed = baseSpeed;
         }
         else if (state == VisitorState.Observing)
         {
@@ -53,6 +58,7 @@ public class VisitorController : MonoBehaviour
                 agent.destination = currentInterestItem.GetStandPosition();
                 state = VisitorState.MovingToObserve;
             }
+            agent.speed = baseSpeed;
         }
         else if (state == VisitorState.FleeingRoom)
         {
@@ -61,6 +67,7 @@ public class VisitorController : MonoBehaviour
                 agent.ResetPath();
                 state = VisitorState.Idle;
             }
+            agent.speed = baseSpeed * 1.5f;
         }
         else if (state == VisitorState.FleeingBuilding)
         {
@@ -69,6 +76,7 @@ public class VisitorController : MonoBehaviour
                 agent.ResetPath();
                 Destroy(gameObject);
             }
+            agent.speed = baseSpeed * 1.5f;
         }
 
     }
