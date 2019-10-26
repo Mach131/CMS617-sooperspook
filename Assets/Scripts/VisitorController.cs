@@ -7,18 +7,21 @@ public class VisitorController : MonoBehaviour
 {
     public Transform exit;
 
+    private VisitorState state;
+
     private Dictionary<Interactable, HashSet<string>> states = new Dictionary<Interactable, HashSet<string>>();
     private float totalFear = 0;
     private float fearThreshold = 4.9f; // How much fear before a jump scare makes them leave
 
     private NavMeshAgent agent;
     private InterestItem currentInterestItem;
-    private float lastSwitchedInterestTimestamp = -1;
-    private float interestDuration = 15f; // How long a visitor stays interested in an object
+    private float startedObservingTimestamp = -1;
+    private float interestDuration = 5f; // How long a visitor stays interested in an object
 
     // Start is called before the first frame update
     void Start()
     {
+        state = VisitorState.Idle;
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(CheckPropStates());
     }
@@ -26,16 +29,48 @@ public class VisitorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentInterestItem == null || Time.time - lastSwitchedInterestTimestamp > interestDuration)
+        if (state == VisitorState.Idle)
         {
             GetNewInterestItem();
             agent.destination = currentInterestItem.GetStandPosition();
+            state = VisitorState.MovingToObserve;
         }
-        if (agent.remainingDistance < 0.5f)
+        else if (state == VisitorState.MovingToObserve)
         {
-            agent.ResetPath();
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentInterestItem.GetLookDirection(), Vector3.up), 0.1f);
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                agent.ResetPath();
+                state = VisitorState.Observing;
+                startedObservingTimestamp = Time.time;
+            }
         }
+        else if (state == VisitorState.Observing)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(currentInterestItem.GetLookDirection(), Vector3.up), 0.2f);
+            if (Time.time - startedObservingTimestamp > interestDuration)
+            {
+                GetNewInterestItem();
+                agent.destination = currentInterestItem.GetStandPosition();
+                state = VisitorState.MovingToObserve;
+            }
+        }
+        else if (state == VisitorState.FleeingRoom)
+        {
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                agent.ResetPath();
+                state = VisitorState.Idle;
+            }
+        }
+        else if (state == VisitorState.FleeingBuilding)
+        {
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                agent.ResetPath();
+                Destroy(gameObject);
+            }
+        }
+
     }
 
     void RunAway()
@@ -43,10 +78,12 @@ public class VisitorController : MonoBehaviour
         if (totalFear >= fearThreshold)
         {
             agent.destination = exit.position;
+            state = VisitorState.FleeingBuilding;
         }
         else
         {
-            // Run out of current room
+            //TODO: Run out of current room
+            state = VisitorState.FleeingRoom;
         }
     }
 
@@ -54,7 +91,7 @@ public class VisitorController : MonoBehaviour
     {
         InterestItem[] items = FindObjectsOfType<InterestItem>();
         currentInterestItem = items[(int)(Random.value * items.Length)];
-        lastSwitchedInterestTimestamp = Time.time;
+        startedObservingTimestamp = Time.time;
     }
 
     IEnumerator CheckPropStates()
@@ -64,8 +101,9 @@ public class VisitorController : MonoBehaviour
             foreach (Interactable interactable in FindObjectsOfType<Interactable>())
             {
                 RaycastHit hit;
+                int layerMask = 1 << 12 + 1 << 13; // Only check if walls or other props are in the way
                 Vector3 rayDirection = interactable.transform.position - transform.position;
-                if (Physics.Raycast(transform.position, rayDirection, out hit, Mathf.Infinity))
+                if (Physics.Raycast(transform.position, rayDirection, out hit, Mathf.Infinity, layerMask))
                 {
                     Interactable hitInteractable = hit.collider.GetComponentInParent<Interactable>();
                     if (hitInteractable != null && hitInteractable.gameObject == interactable.gameObject && Vector3.Dot(transform.forward, rayDirection) > 0)
@@ -97,6 +135,7 @@ public class VisitorController : MonoBehaviour
     public void ApplyFear(float fearAmount, Interactable source, bool isJumpScare)
     {
         totalFear += fearAmount;
+        Debug.Log("Fear is " + totalFear);
         if (source != null) // Can be player, which is not an Interactable
         {
             ObserveState(source, true);
@@ -105,6 +144,15 @@ public class VisitorController : MonoBehaviour
         {
             RunAway();
         }
+    }
+
+    enum VisitorState
+    {
+        Idle,
+        Observing,
+        MovingToObserve,
+        FleeingRoom,
+        FleeingBuilding
     }
 
     /**

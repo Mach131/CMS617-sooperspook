@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -524,21 +524,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6894692947880482084, guid: de952296eacfafb47b7682a86ca49cc8,
-        type: 3}
-      propertyPath: visitorStandLocation.z
-      value: 6.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6894692947880482084, guid: de952296eacfafb47b7682a86ca49cc8,
-        type: 3}
-      propertyPath: visitorLookDirection.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6894692947880482084, guid: de952296eacfafb47b7682a86ca49cc8,
-        type: 3}
-      propertyPath: visitorLookDirection.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de952296eacfafb47b7682a86ca49cc8, type: 3}

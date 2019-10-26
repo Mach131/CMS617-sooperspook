@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1945031904964973546}
   - component: {fileID: 704466512095257282}
   - component: {fileID: 1922165485432608175}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: WallMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

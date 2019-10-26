@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class PlayerInvisibility : MonoBehaviour
 {
-    private MeshRenderer[] mrs;
+    public GameObject invisibilityCloak;
+
+    private SkinnedMeshRenderer[] mrs;
 
     private bool isInvisible = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        mrs = GetComponentsInChildren<MeshRenderer>();
+        mrs = GetComponentsInChildren<SkinnedMeshRenderer>();
 
         if (isInvisible)
         {
-            foreach (MeshRenderer mr in mrs)
-            {
-                Color baseColor = mr.material.GetColor("_BaseColor");
-                mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
-            }
+            invisibilityCloak.SetActive(true);
+            //foreach (SkinnedMeshRenderer mr in mrs)
+            //{
+            //    Debug.Log("Materials:" + mr.materials.Length);
+            //    foreach (Material mat in mr.materials)
+            //    {
+            //        Color baseColor = mat.GetColor("_BaseColor");
+            //        mat.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
+            //    }
+            //}
+        }
+        else
+        {
+            invisibilityCloak.SetActive(false);
         }
     }
 
@@ -29,7 +40,6 @@ public class PlayerInvisibility : MonoBehaviour
         if (Input.GetButtonDown("Toggle Invisibility"))
         {
             ToggleInvisibility();
-            Debug.Log("Invisibility: " + isInvisible);
         }
     }
 
@@ -38,25 +48,32 @@ public class PlayerInvisibility : MonoBehaviour
         if (!isInvisible)
         {
             isInvisible = true;
-        } else if (CauseSpook()) //returns true iff a visitor was spooked
+            invisibilityCloak.SetActive(true);
+            //foreach (SkinnedMeshRenderer mr in mrs)
+            //{
+            //    foreach (Material mat in mr.materials)
+            //    {
+            //        Color baseColor = mat.GetColor("_BaseColor");
+            //        mat.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
+            //    }
+            //}
+        }
+        else if (CauseSpook()) //returns true iff a visitor was spooked
         {
             isInvisible = false;
-        } else
-        {
-            Debug.Log("Toggle failed");
+            invisibilityCloak.SetActive(false);
+            //foreach (SkinnedMeshRenderer mr in mrs)
+            //{
+            //    foreach (Material mat in mr.materials)
+            //    {
+            //        Color baseColor = mat.GetColor("_BaseColor");
+            //        mat.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a / 0.3f));
+            //    }
+            //}
         }
-
-        foreach (MeshRenderer mr in mrs)
+        else
         {
-            Color baseColor = mr.material.GetColor("_BaseColor");
-            if (isInvisible)
-            {
-                mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a * 0.3f));
-            }
-            else
-            {
-                mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a / 0.3f));
-            }
+            // Toggle failed
         }
     }
 
