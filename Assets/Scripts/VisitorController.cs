@@ -106,4 +106,12 @@ public class VisitorController : MonoBehaviour
             RunAway();
         }
     }
+
+    /**
+     * Indicates whether or not a jumpscare can successfully cause the player to run away.
+     */
+    public bool CanJumpscare()
+    {
+        return totalFear >= fearThreshold;
+    }
 }

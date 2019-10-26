@@ -29,12 +29,23 @@ public class PlayerInvisibility : MonoBehaviour
         if (Input.GetButtonDown("Toggle Invisibility"))
         {
             ToggleInvisibility();
+            Debug.Log("Invisibility: " + isInvisible);
         }
     }
 
     void ToggleInvisibility()
     {
-        isInvisible = !isInvisible;
+        if (!isInvisible)
+        {
+            isInvisible = true;
+        } else if (CauseSpook()) //returns true iff a visitor was spooked
+        {
+            isInvisible = false;
+        } else
+        {
+            Debug.Log("Toggle failed");
+        }
+
         foreach (MeshRenderer mr in mrs)
         {
             Color baseColor = mr.material.GetColor("_BaseColor");
@@ -44,26 +55,37 @@ public class PlayerInvisibility : MonoBehaviour
             }
             else
             {
-                CauseSpook();
                 mr.material.SetColor("_BaseColor", new Color(baseColor.r, baseColor.g, baseColor.b, baseColor.a / 0.3f));
             }
         }
     }
 
-    void CauseSpook()
+    //Returns whether or not a spook successfully happened
+    bool CauseSpook()
     {
+        bool spookSuccess = false;
+
         foreach (VisitorController visitor in FindObjectsOfType<VisitorController>())
         {
+            if (!visitor.CanJumpscare())
+            {
+                continue;
+            }
+
             RaycastHit hit;
             Vector3 rayDirection = visitor.transform.position - transform.position;
             if (Physics.Raycast(transform.position, rayDirection, out hit, Mathf.Infinity))
             {
-                if (hit.collider.gameObject == visitor.gameObject && Vector3.Dot(visitor.transform.forward, rayDirection) < 0)
+                if (hit.collider.gameObject.GetComponentInParent<VisitorController>() == visitor &&
+                    Vector3.Dot(visitor.transform.forward, rayDirection) < 0)
                 {
+                    spookSuccess = true;
                     float fearWeight = 1f;
                     visitor.ApplyFear(fearWeight, null, true);
                 }
             }
         }
+
+        return spookSuccess;
     }
 }
