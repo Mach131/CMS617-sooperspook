@@ -35,9 +35,11 @@ public class VisitorController : MonoBehaviour
         if (state == VisitorState.Idle)
         {
             GetNewInterestItem();
-            agent.destination = currentInterestItem.GetStandPosition();
-            state = VisitorState.MovingToObserve;
-            agent.speed = baseSpeed;
+			if( currentInterestItem != null ) {
+				agent.destination = currentInterestItem.GetStandPosition();
+				state = VisitorState.MovingToObserve;
+				agent.speed = baseSpeed;
+			}
         }
         else if (state == VisitorState.MovingToObserve)
         {
@@ -98,8 +100,10 @@ public class VisitorController : MonoBehaviour
     void GetNewInterestItem()
     {
         InterestItem[] items = FindObjectsOfType<InterestItem>();
-        currentInterestItem = items[(int)(Random.value * items.Length)];
-        startedObservingTimestamp = Time.time;
+		if( items.Length > 0 ) {
+			currentInterestItem = items[(int) (Random.value * items.Length)];
+			startedObservingTimestamp = Time.time;
+		}
     }
 
     IEnumerator CheckPropStates()
