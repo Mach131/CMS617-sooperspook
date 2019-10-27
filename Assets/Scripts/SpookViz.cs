@@ -61,7 +61,7 @@ public class SpookViz : MonoBehaviour
 			spookMap.GridSize.x, spookMap.GridSize.y];
 
 		foreach( Vector2Int cell in spookMap.CellEnumerable() ) {
-			Vector2 p = spookMap.CellCenter(cell);
+			Vector2 p = spookMap.CellCenter2(cell);
 			objectGrid[cell.x, cell.y] = CreateCircle(p, parent);
 		}
 

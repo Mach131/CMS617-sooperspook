@@ -69,7 +69,7 @@ abstract public class ScalarMap : MonoBehaviour
 		size = new Vector2Int(numXCells, numYCells);
 		heatmap = new float[numXCells, numYCells];
 		foreach( Vector2Int cell in CellEnumerable() ) {
-			Vector2 pos = CellCenter(cell);
+			Vector2 pos = CellCenter2(cell);
 			SetAt(cell, 1);
 		}
 	}
@@ -124,10 +124,23 @@ abstract public class ScalarMap : MonoBehaviour
 	/// <returns>
 	/// Position of the input cell's centroid in 2D space.
 	/// </returns>
-	public Vector2 CellCenter( Vector2Int cell ) {
+	public Vector2 CellCenter2( Vector2Int cell ) {
 		float x = (cell.x + .5f) * cellSize + bounds.xMin;
 		float y = (cell.y + .5f) * cellSize + bounds.yMin;
 		return new Vector2(x, y);
+	}
+
+	/// <summary>
+	/// Get the position of the input cell's geometric center.
+	/// </summary>
+	/// <param name="cell">Cell to fetch the position for.</param>
+	/// <returns>
+	/// Position of the input cell's centroid in 3D space.
+	/// </returns>
+	public Vector3 CellCenter3( Vector2Int cell ) {
+		float x = (cell.x + .5f) * cellSize + bounds.xMin;
+		float y = (cell.y + .5f) * cellSize + bounds.yMin;
+		return ProjectTo3(new Vector2(x, y));
 	}
 
 	/// <summary>
@@ -240,7 +253,7 @@ abstract public class ScalarMap : MonoBehaviour
 		float a01 = f01 - f00;
 		float a11 = f11 + f00 - f10 - f01;
 
-		Vector2 p_0 = CellCenter(localCell);
+		Vector2 p_0 = CellCenter2(localCell);
 		float alpha = (position.x - p_0.x) / cellSize;
 		float beta  = (position.y - p_0.y) / cellSize;
 

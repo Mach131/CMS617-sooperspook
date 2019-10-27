@@ -20,11 +20,14 @@ public class VisitorController : MonoBehaviour
 
     private float baseSpeed;
 
+	private VisitorScript visitorScript;
+
     // Start is called before the first frame update
     void Start()
     {
         state = VisitorState.Idle;
         agent = GetComponent<NavMeshAgent>();
+		visitorScript = GetComponent<VisitorScript>();
         baseSpeed = agent.speed;
         StartCoroutine(CheckPropStates());
     }
@@ -146,8 +149,19 @@ public class VisitorController : MonoBehaviour
 
     public void ApplyFear(float fearAmount, Interactable source, bool isJumpScare)
     {
+		const float fearGain = 1.0e0f;
+		Vector3 sourcePos = source.transform.position;
+		foreach( Vector2Int cell in visitorScript.SpookMap.CellEnumerable() ) {
+			Vector3 p = visitorScript.SpookMap.CellCenter3(cell);
+			Vector3 deltaR = p - sourcePos;
+			//Debug.Log(deltaR);
+			float rMag = deltaR.magnitude;
+			float v = visitorScript.SpookMap.ValueAt(cell);
+			v += fearGain / rMag;
+			visitorScript.SpookMap.SetAt(cell, v);
+		}
         totalFear += fearAmount;
-        Debug.Log("Fear is " + totalFear);
+        //Debug.Log("Fear is " + totalFear);
         if (source != null) // Can be player, which is not an Interactable
         {
             ObserveState(source, true);
