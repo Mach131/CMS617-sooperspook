@@ -25,8 +25,9 @@ public class SpookSystem : EditorWindow
 
 	void OnGUI() {
 		spookViz = FindObjectOfType<SpookViz>();
-		Canvas canvas = spookViz.GetComponent<Canvas>();
-		
+		Canvas canvas = null;
+		if( SpookVizAvailable )
+			canvas = spookViz.GetComponent<Canvas>();
 
 		GUILayout.Label("Base Settings", EditorStyles.boldLabel);
 		//myString = EditorGUILayout.TextField("Text Field", myString);
@@ -41,14 +42,15 @@ public class SpookSystem : EditorWindow
 		SpookMap.bounds = SpookMapBoundsGUI(SpookMap.bounds);
 		
 		using( new EditorGUI.DisabledScope(SpookVizAvailable == false) ) {
+
 			visualizeSpook = EditorGUILayout.Toggle(
 				"Visualize Spook Heatmap", spookViz.enabled);
-			
 		}
 
-		canvas.enabled = visualizeSpook;
-		spookViz.enabled = visualizeSpook;
-
+		if( SpookVizAvailable ) {
+			canvas.enabled = visualizeSpook;
+			spookViz.enabled = visualizeSpook;
+		}
 	}
 
 	private Rect SpookMapBoundsGUI(Rect bounds) {
