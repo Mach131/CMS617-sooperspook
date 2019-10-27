@@ -149,26 +149,32 @@ public class VisitorController : MonoBehaviour
 
     public void ApplyFear(float fearAmount, Interactable source, bool isJumpScare)
     {
-		const float fearGain = 1.0e0f;
-		Vector3 sourcePos = source.transform.position;
-		foreach( Vector2Int cell in visitorScript.SpookMap.CellEnumerable() ) {
-			Vector3 p = visitorScript.SpookMap.CellCenter3(cell);
-			Vector3 deltaR = p - sourcePos;
-			//Debug.Log(deltaR);
-			float rMag = deltaR.magnitude;
-			float v = visitorScript.SpookMap.ValueAt(cell);
-			v += fearGain / rMag;
-			visitorScript.SpookMap.SetAt(cell, v);
-		}
         totalFear += fearAmount;
         //Debug.Log("Fear is " + totalFear);
-        if (source != null) // Can be player, which is not an Interactable
+        if (source != null) // Source can be player, which is not an Interactable
         {
+            UpdateSpookMap(source.transform.position);
             ObserveState(source, true);
         }
         if (isJumpScare)
         {
             RunAway();
+        }
+    }
+
+    // Updates the spook map to show the current gradient
+    public void UpdateSpookMap(Vector3 sourcePos)
+    {
+        const float fearGain = 1.0e0f;
+        foreach (Vector2Int cell in visitorScript.SpookMap.CellEnumerable())
+        {
+            Vector3 p = visitorScript.SpookMap.CellCenter3(cell);
+            Vector3 deltaR = p - sourcePos;
+            //Debug.Log(deltaR);
+            float rMag = deltaR.magnitude;
+            float v = visitorScript.SpookMap.ValueAt(cell);
+            v += fearGain / rMag;
+            visitorScript.SpookMap.SetAt(cell, v);
         }
     }
 
