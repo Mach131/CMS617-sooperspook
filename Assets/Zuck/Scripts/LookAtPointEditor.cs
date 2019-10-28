@@ -1,4 +1,5 @@
 ﻿//C# Example (LookAtPointEditor.cs)
+#if UNITY_EDITOR // Errors get thrown if trying to build with editor scripts
 using UnityEngine;
 using UnityEditor;
 
@@ -24,3 +25,4 @@ public class LookAtPointEditor : Editor
         }
     }
 }
+#endif // UNITY_EDITOR
