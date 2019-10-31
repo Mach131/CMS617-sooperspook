@@ -44,7 +44,8 @@ public class VisitorScript : MonoBehaviour
 	private void FixedUpdate() {
 		// push updates to the spook-o-meter
 		// Allows the meter itself to be completely dumb.
-		SpookOMeter.NormingValue = SpookMap.Max();
+		//SpookOMeter.NormingValue = SpookMap.Max();
+		SpookOMeter.NormingValue = 20.0f;
 		SpookOMeter.Value = LocalSpook();
 	}
 

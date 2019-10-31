@@ -99,7 +99,7 @@ public class PlayerInvisibility : MonoBehaviour
                     spookSuccess = true;
                     float fearWeight = 1f;
                     visitor.ApplyFear(fearWeight, null, true);
-                    visitor.UpdateSpookMap(transform.position);
+                    visitor.UpdateSpookMap(transform.position, fearWeight);
                 }
             }
         }

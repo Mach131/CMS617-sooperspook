@@ -46,6 +46,7 @@ public class SpookViz : MonoBehaviour
 		Assert.AreEqual(GridSize.y, objectGrid.GetLength(1));
 
 		float max = spookMap.Max();
+		max = 5.0f;
 
 		foreach (Vector2Int cell in spookMap.CellEnumerable()) {
 			float normed = Mathf.Clamp01(spookMap.ValueAt(cell) / max);
