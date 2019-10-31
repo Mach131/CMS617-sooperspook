@@ -7,6 +7,7 @@ public class VisitorController : MonoBehaviour
 {
     public Transform exit;
 
+    private Animator animator;
     private VisitorState state;
 
     private GameObject player;
@@ -31,6 +32,7 @@ public class VisitorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         state = VisitorState.Idle;
         player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody>();
