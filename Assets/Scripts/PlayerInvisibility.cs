@@ -8,7 +8,7 @@ public class PlayerInvisibility : MonoBehaviour
 
     private SkinnedMeshRenderer[] mrs;
 
-    private bool isInvisible = true;
+    public bool isInvisible = true;
 
     // Start is called before the first frame update
     void Start()

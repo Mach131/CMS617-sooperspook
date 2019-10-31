@@ -9,6 +9,10 @@ public class VisitorController : MonoBehaviour
 
     private VisitorState state;
 
+    private GameObject player;
+
+    private Rigidbody rb;
+
     private Dictionary<Interactable, HashSet<string>> states = new Dictionary<Interactable, HashSet<string>>();
     private float totalFear = 0;
     private float fearThreshold = 4.9f; // How much fear before a jump scare makes them leave
@@ -20,12 +24,16 @@ public class VisitorController : MonoBehaviour
 
     private float baseSpeed;
 
+    public float runSpeed = 5f;
+
 	private VisitorScript visitorScript;
 
     // Start is called before the first frame update
     void Start()
     {
         state = VisitorState.Idle;
+        player = GameObject.FindWithTag("Player");
+        rb = GetComponent<Rigidbody>();
         agent = GetComponent<NavMeshAgent>();
 		visitorScript = GetComponent<VisitorScript>();
         baseSpeed = agent.speed;
@@ -76,12 +84,29 @@ public class VisitorController : MonoBehaviour
         }
         else if (state == VisitorState.FleeingBuilding)
         {
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            agent.ResetPath();
+            rb.isKinematic = false;
+            Vector3 force = -visitorScript.LocalGradient().normalized * runSpeed;
+            if (!player.GetComponent<PlayerInvisibility>().isInvisible)
             {
-                agent.ResetPath();
+                Vector3 playerOffset = transform.position - player.transform.position;
+                force += playerOffset.normalized * 10/playerOffset.magnitude * runSpeed;
+            }
+            Vector3 exitOffset = transform.position - exit.position;
+            force += exitOffset.normalized * 2/exitOffset.magnitude * runSpeed;
+            rb.AddForce(force);
+
+            if ((transform.position - exit.position).magnitude < 5f)
+            {
                 Destroy(gameObject);
             }
-            agent.speed = baseSpeed * 1.5f;
+
+            //if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            //{
+            //    agent.ResetPath();
+            //    Destroy(gameObject);
+            //}
+            //agent.speed = baseSpeed * 1.5f;
         }
 
     }
@@ -90,7 +115,7 @@ public class VisitorController : MonoBehaviour
     {
         if (totalFear >= fearThreshold)
         {
-            agent.destination = exit.position;
+            //agent.destination = exit.position;
             state = VisitorState.FleeingBuilding;
         }
         else
