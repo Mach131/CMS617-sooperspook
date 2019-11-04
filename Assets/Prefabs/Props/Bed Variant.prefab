@@ -59,6 +59,9 @@ MonoBehaviour:
   baseState: Neat
   activeState: Messy
   fearSource: {fileID: 1225621671171040961}
+  animator: {fileID: 4751133414526141201}
+  animatorTriggerParameter: Mess
+  reverseAnimatorTriggerParameter: Unmess
   reverseMenuName: Make bed
   reverseFearSource: {fileID: 1225621671171040961}
 --- !u!1001 &5212904812028124239
@@ -136,6 +139,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5212904812028124239}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &4751133414526141201 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 700485544958599006, guid: 7a9556f84da714996a08ac35f93290aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 5212904812028124239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6797330537944297170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,21 +152,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9125669081426294454, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: visitorStandLocation.x
-      value: 11.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 9125669081426294454, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: visitorStandLocation.z
-      value: -11.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9125669081426294454, guid: 92a40e02e2162784aad06000f163ed6c,
-        type: 3}
-      propertyPath: visitorLookDirection.x
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 4299255513692855122, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}
       propertyPath: m_Name
@@ -287,6 +281,21 @@ PrefabInstance:
         type: 3}
       propertyPath: manualString
       value: Bed Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125669081426294454, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: visitorStandLocation.x
+      value: 11.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125669081426294454, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: visitorStandLocation.z
+      value: -11.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125669081426294454, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: visitorLookDirection.x
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3595738251880035717, guid: 92a40e02e2162784aad06000f163ed6c,
         type: 3}

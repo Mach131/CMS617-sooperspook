@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7954845882598229508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990431597078428134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c81548a76c43498087536e5703c4b89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fearWeight: 1
+  isJumpScare: 0
 --- !u!208 &8595726029515421242
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -16,20 +30,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 2.91, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &7954845882598229508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990431597078428134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c81548a76c43498087536e5703c4b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fearWeight: 1
-  isJumpScare: 0
 --- !u!1001 &4697606901053331979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,6 +377,11 @@ PrefabInstance:
       propertyPath: fearSource
       value: 
       objectReference: {fileID: 7954845882598229508}
+    - target: {fileID: 546609902650364548, guid: 92a40e02e2162784aad06000f163ed6c,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 8042324003956907860}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92a40e02e2162784aad06000f163ed6c, type: 3}
 --- !u!1 &8834732653006045529 stripped
@@ -466,3 +471,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c77f6ff8ef21461f971f8f5d8712fab, type: 3}
+--- !u!95 &8042324003956907860 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4070432571542797849, guid: 4c77f6ff8ef21461f971f8f5d8712fab,
+    type: 3}
+  m_PrefabInstance: {fileID: 6332351114227097933}
+  m_PrefabAsset: {fileID: 0}

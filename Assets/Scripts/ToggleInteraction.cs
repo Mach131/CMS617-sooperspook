@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ToggleInteraction : Interaction
 {
+    public string reverseAnimatorTriggerParameter = "Reverse Trigger";
     public string reverseMenuName;
     public FearSource reverseFearSource;
 
@@ -43,10 +44,12 @@ public class ToggleInteraction : Interaction
         if (!inActiveState)
         {
             fearSource.TriggerEffect(interactable);
+            animator.SetTrigger(animatorTriggerParameter);
         }
         else
         {
             reverseFearSource.TriggerEffect(interactable);
+            animator.SetTrigger(reverseAnimatorTriggerParameter);
         }
         inActiveState = !inActiveState;
         gameObject.GetComponentInChildren<InteractionMenu>().OnInteractionChange();

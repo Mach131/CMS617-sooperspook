@@ -9,6 +9,8 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
     public string baseState;
     public string activeState;
     public FearSource fearSource;
+    public Animator animator;
+    public string animatorTriggerParameter = "Trigger";
 
     protected Interactable interactable;
 
@@ -35,6 +37,7 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
     {
         activated = true;
         fearSource.TriggerEffect(interactable);
+        animator.SetTrigger(animatorTriggerParameter);
     }
 
     public virtual string GetState()
