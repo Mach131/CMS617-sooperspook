@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+
 public class Interaction : MonoBehaviour, IComparable<Interaction>
 {
     public string menuName;
@@ -12,6 +14,7 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
     public Animator animator;
     public string animatorTriggerParameter = "Trigger";
 
+	protected StudioEventEmitter eventEmitter;
     protected Interactable interactable;
 
     private bool activated = false;
@@ -19,6 +22,7 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        eventEmitter = GetComponent<StudioEventEmitter>();
         interactable = GetComponent<Interactable>();
     }
 
@@ -38,6 +42,7 @@ public class Interaction : MonoBehaviour, IComparable<Interaction>
         activated = true;
         fearSource.TriggerEffect(interactable);
         animator.SetTrigger(animatorTriggerParameter);
+        eventEmitter.Play();
     }
 
     public virtual string GetState()

@@ -53,5 +53,6 @@ public class ToggleInteraction : Interaction
         }
         inActiveState = !inActiveState;
         gameObject.GetComponentInChildren<InteractionMenu>().OnInteractionChange();
+        eventEmitter.Play();
     }
 }
