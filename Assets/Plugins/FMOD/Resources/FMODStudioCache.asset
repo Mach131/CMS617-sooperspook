@@ -125,7 +125,7 @@ MonoBehaviour:
   - {fileID: 932041085896930564}
   StringsBanks:
   - {fileID: 3176337820667386161}
-  stringsBankWriteTime: 637084803930000000
+  stringsBankWriteTime: 637084807710000000
   cacheVersion: 3
 --- !u!114 &932041085896930564
 MonoBehaviour:
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/dangond/Documents/Unity/sooperspook/Assets/Audio/Master/Desktop/Master.bank
   SubDir: 
-  lastModified: 637084803930000000
+  lastModified: 637084807710000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/dangond/Documents/Unity/sooperspook/Assets/Audio/Master/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637084803930000000
+  lastModified: 637084807710000000
   LoadResult: 0
   FileSizes:
   - Name: 

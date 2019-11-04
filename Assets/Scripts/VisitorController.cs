@@ -32,7 +32,7 @@ public class VisitorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         state = VisitorState.Idle;
         player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody>();
@@ -45,6 +45,11 @@ public class VisitorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (totalFear > fearThreshold)
+        {
+            animator.SetInteger("Shookiness", 1);
+        }
+
         if (state == VisitorState.Idle)
         {
             GetNewInterestItem();
@@ -83,20 +88,26 @@ public class VisitorController : MonoBehaviour
                 state = VisitorState.Idle;
             }
             agent.speed = baseSpeed * 1.5f;
+            animator.SetInteger("Shookiness", 2);
         }
         else if (state == VisitorState.FleeingBuilding)
         {
             agent.ResetPath();
             rb.isKinematic = false;
-            Vector3 force = -visitorScript.LocalGradient().normalized * runSpeed;
+            Vector3 direction = Vector3.zero;
+            direction += -visitorScript.LocalGradient().normalized;
             if (!player.GetComponent<PlayerInvisibility>().isInvisible)
             {
                 Vector3 playerOffset = transform.position - player.transform.position;
-                force += playerOffset.normalized * 10/playerOffset.magnitude * runSpeed;
+                direction += playerOffset.normalized;
             }
-            Vector3 exitOffset = transform.position - exit.position;
-            force += exitOffset.normalized * 2/exitOffset.magnitude * runSpeed;
-            rb.AddForce(force);
+            Vector3 exitOffset = exit.position - transform.position;
+            direction += exitOffset.normalized * 2.5f;
+            Debug.Log(direction);
+            //rb.AddForce(force);
+            rb.velocity = direction.normalized * baseSpeed;
+
+            animator.SetInteger("Shookiness", 2);
 
             if ((transform.position - exit.position).magnitude < 5f)
             {
