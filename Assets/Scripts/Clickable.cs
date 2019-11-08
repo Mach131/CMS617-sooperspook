@@ -5,11 +5,13 @@ using UnityEngine;
 public class Clickable : MonoBehaviour
 {
     private PlayerMovement player;
+    private BoxCollider collider;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        collider = gameObject.GetComponent<BoxCollider>();
     }
 
     // MUST CALL base.Update()!!!
@@ -25,7 +27,8 @@ public class Clickable : MonoBehaviour
                     hit.transform.GetComponentInParent<Clickable>() != null && hit.transform.GetComponentInParent<Clickable>().gameObject == gameObject)
                 {
                     // TODO: adjust exact position that the player moves to
-                    player.moveToPosition(new Vector3(transform.position.x, 0, transform.position.z));
+                    Vector3 targetPosition = collider.ClosestPoint(player.transform.position);
+                    player.moveToPosition(new Vector3(targetPosition.x, 0, targetPosition.z));
                     OnClick();
                 }
             }
