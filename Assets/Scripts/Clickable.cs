@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Clickable : MonoBehaviour
 {
+    private PlayerMovement player;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     // MUST CALL base.Update()!!!
@@ -22,6 +24,8 @@ public class Clickable : MonoBehaviour
                 if (hit.transform.GetComponent<Clickable>() != null && hit.transform.GetComponent<Clickable>().gameObject == gameObject ||
                     hit.transform.GetComponentInParent<Clickable>() != null && hit.transform.GetComponentInParent<Clickable>().gameObject == gameObject)
                 {
+                    // TODO: adjust exact position that the player moves to
+                    player.moveToPosition(new Vector3(transform.position.x, 0, transform.position.z));
                     OnClick();
                 }
             }
