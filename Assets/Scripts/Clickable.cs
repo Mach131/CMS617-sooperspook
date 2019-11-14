@@ -5,13 +5,13 @@ using UnityEngine;
 public class Clickable : MonoBehaviour
 {
     private PlayerMovement player;
-    private BoxCollider collider;
+    private Collider collider;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        collider = gameObject.GetComponent<BoxCollider>();
+        collider = gameObject.GetComponent<Collider>();
     }
 
     // MUST CALL base.Update()!!!

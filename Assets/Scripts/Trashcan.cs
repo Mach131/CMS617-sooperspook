@@ -10,8 +10,9 @@ public class Trashcan : Clickable
     private Animator animator;
 
     // Start is called before the first frame update
-    void Start()
+    new protected void Start()
     {
+        base.Start();
         animator = GetComponent<Animator>();   
     }
 
