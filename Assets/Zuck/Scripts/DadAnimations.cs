@@ -24,7 +24,7 @@ public class DadAnimations : MonoBehaviour
         while(true)
         {
             if (thisthing == null) {
-                head.rotation = Quaternion.Euler(-10.6, 110.414, 21.2);
+                head.rotation = Quaternion.Euler(-10.6f, 110.414f, 21.2f);
             }
             head.LookAt(thisthing);
             yield return null;
