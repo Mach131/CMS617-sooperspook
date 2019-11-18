@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8660496776804818099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/bedSheets
+  m_EditorClassIdentifier: 
+  Path: event:/bedSheets
+  guid: ed8bc0ea26f6734aa3bced3b37e054a9
+  Banks:
+  - {fileID: -208220895708146192}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1907
 --- !u!114 &-8525676000527350463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +145,69 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1907
+--- !u!114 &-1378369017056078341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: /Users/dangond/Documents/Unity/sooperspook/Assets/Audio/Master/Desktop/Master.strings.bank
+  SubDir: Users/dangond/Documents/Unity/sooperspook/
+  lastModified: 637094342940000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 788
+  Exists: 1
+--- !u!114 &-517699623032297603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tableShake
+  m_EditorClassIdentifier: 
+  Path: event:/tableShake
+  guid: b68444a7a3d59645a3ffb15c37f22fae
+  Banks:
+  - {fileID: -208220895708146192}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-208220895708146192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: /Users/dangond/Documents/Unity/sooperspook/Assets/Audio/Master/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637094342940000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 21792
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,16 +221,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 932041085896930564}
-  - {fileID: -8525676000527350463}
+  - {fileID: 5745106390275383116}
+  - {fileID: 1528215086172943206}
   EditorEvents:
-  - {fileID: -6548755536228379171}
-  - {fileID: -3267836109977285360}
+  - {fileID: 3115040474234626754}
+  - {fileID: 7096850160991444240}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 932041085896930564}
+  - {fileID: 1528215086172943206}
   StringsBanks:
-  - {fileID: -8525676000527350463}
+  - {fileID: 5745106390275383116}
   stringsBankWriteTime: 637094342940000000
   cacheVersion: 3
 --- !u!114 &932041085896930564
@@ -183,6 +269,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &1528215086172943206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ./Assets/Audio/Master/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637094342940000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2049073872351456985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +305,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &3115040474234626754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/tableShake
+  m_EditorClassIdentifier: 
+  Path: event:/tableShake
+  guid: b68444a7a3d59645a3ffb15c37f22fae
+  Banks:
+  - {fileID: 1528215086172943206}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3176337820667386161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +348,49 @@ MonoBehaviour:
   - Name: 
     Value: 788
   Exists: 0
+--- !u!114 &5745106390275383116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ./Assets/Audio/Master/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637094342940000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 788
+  Exists: 1
+--- !u!114 &7096850160991444240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/bedSheets
+  m_EditorClassIdentifier: 
+  Path: event:/bedSheets
+  guid: ed8bc0ea26f6734aa3bced3b37e054a9
+  Banks:
+  - {fileID: 1528215086172943206}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1907
 --- !u!114 &8565939764931430655
 MonoBehaviour:
   m_ObjectHideFlags: 0

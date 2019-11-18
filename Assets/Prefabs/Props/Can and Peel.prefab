@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c0d2a6f96e14889a3cd8965c483283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPosition: {x: -6.39, y: -1.95, z: 0}
   orangePeel: {fileID: 5908345037136959152}
 --- !u!95 &5908345036956683537
 Animator:

@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Clickable : MonoBehaviour
 {
+    public Vector3 playerPosition;
+
     private PlayerMovement player;
-    private Collider collider;
+    private Vector3 finalPlayerPosition;
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(transform.position + playerPosition, 0.5f);
+    }
 
     // Start is called before the first frame update
     protected void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        collider = gameObject.GetComponent<Collider>();
+        finalPlayerPosition = transform.position + playerPosition;
     }
 
     // MUST CALL base.Update()!!!
@@ -26,8 +34,7 @@ public class Clickable : MonoBehaviour
                 if (hit.transform.GetComponent<Clickable>() != null && hit.transform.GetComponent<Clickable>().gameObject == gameObject ||
                     hit.transform.GetComponentInParent<Clickable>() != null && hit.transform.GetComponentInParent<Clickable>().gameObject == gameObject)
                 {
-                    // TODO: adjust exact position that the player moves to
-                    Vector3 targetPosition = collider.ClosestPoint(player.transform.position);
+                    Vector3 targetPosition = finalPlayerPosition;
                     player.moveToPosition(new Vector3(targetPosition.x, 0, targetPosition.z));
                     OnClick();
                 }

@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         this.rBody.velocity = movement;
         if (movement.magnitude > 0.1f)
         {
-            transform.rotation = Quaternion.LookRotation(movement, Vector3.up);
+            transform.rotation = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z), Vector3.up);
         }
 
         if (movingToTarget && (this.targetPosition - this.rBody.position).magnitude <= (this.speed * Time.deltaTime * 1.5))

@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class FatherController : MonoBehaviour
 {
+    public GameObject toolbox;
+    public Transform rightHand;
+
     private Animator animator;
     private Trashcan trashcan;
     private Fort fort;
+    private Bookshelf bookshelf;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +18,7 @@ public class FatherController : MonoBehaviour
         animator = GetComponent<Animator>();
         trashcan = FindObjectOfType<Trashcan>();
         fort = FindObjectOfType<Fort>();
+        bookshelf = FindObjectOfType<Bookshelf>();
     }
 
     // Update is called once per frame
@@ -31,5 +36,20 @@ public class FatherController : MonoBehaviour
             }
             trashcan.orangePeel.SetTrigger("Slip");
         }
+    }
+
+    public void NoticeToolbox()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Crashed"))
+        {
+            animator.SetTrigger("NoticeToolbox");
+        }
+    }
+
+    // this is called by the animation once the box has been grabbed
+    public void GrabBox()
+    {
+        toolbox.transform.parent = rightHand;
+        bookshelf.RemoveBox();
     }
 }
