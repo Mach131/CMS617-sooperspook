@@ -6,6 +6,7 @@ public class FatherController : MonoBehaviour
 {
     public GameObject toolbox;
     public Transform rightHand;
+    public Transform pickUpMusicboxTransform;
 
     private Animator animator;
     private Trashcan trashcan;
@@ -51,5 +52,10 @@ public class FatherController : MonoBehaviour
     {
         toolbox.transform.parent = rightHand;
         bookshelf.RemoveBox();
+    }
+
+    public void NoticeMusicbox()
+    {
+        animator.SetTrigger("NoticeMusicbox");
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bookshelf : Clickable
 {
+    public Musicbox musicbox;
+
     private Animator animator;
     private bool hasToolbox = true;
 
@@ -36,5 +38,10 @@ public class Bookshelf : Clickable
     protected override void OnClick()
     {
         Shake();
+    }
+
+    public void OnMusicboxFall()
+    {
+        musicbox.hasFallen = true;
     }
 }
