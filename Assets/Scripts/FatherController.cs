@@ -5,6 +5,7 @@ using UnityEngine;
 public class FatherController : MonoBehaviour
 {
     public GameObject toolbox;
+    public GameObject musicbox;
     public Transform rightHand;
     public Transform pickUpMusicboxTransform;
 
@@ -57,5 +58,11 @@ public class FatherController : MonoBehaviour
     public void NoticeMusicbox()
     {
         animator.SetTrigger("NoticeMusicbox");
+    }
+
+    // this is called by the animation once the musicbox has been grabbed
+    public void GrabMusicbox()
+    {
+        musicbox.transform.parent = rightHand;
     }
 }
