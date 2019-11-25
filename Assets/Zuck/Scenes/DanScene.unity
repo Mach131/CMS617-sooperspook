@@ -2138,6 +2138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolbox: {fileID: 1677329917}
+  musicbox: {fileID: 1159443449}
   rightHand: {fileID: 1508282181}
   pickUpMusicboxTransform: {fileID: 636125795}
 --- !u!1001 &9174488509542425402
