@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7013874061550163027}
   - component: {fileID: 7731927450116863210}
   - component: {fileID: 2105397347660686249}
-  - component: {fileID: 8856922940741697990}
+  - component: {fileID: 7801481495570742012}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -34,7 +34,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 36.260002, y: 45.365, z: 2.529}
+  m_LocalEulerAnglesHint: {x: 59.534004, y: 90, z: 0}
 --- !u!20 &7013874061550163026
 Camera:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404c37bffe68549029548644ef0a4e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &8856922940741697990
+--- !u!95 &7801481495570742012
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

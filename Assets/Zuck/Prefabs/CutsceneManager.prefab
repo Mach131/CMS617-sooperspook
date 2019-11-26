@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2420469431832250903}
+  - component: {fileID: 2407154890447173130}
   m_Layer: 0
   m_Name: CutsceneManager
   m_TagString: Untagged
@@ -30,3 +31,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &2407154890447173130
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669189575112865132}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: c40cae6f9715a42759b14c0803ebca2b, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 1094823106911738580, guid: c40cae6f9715a42759b14c0803ebca2b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2586359320640079125, guid: c40cae6f9715a42759b14c0803ebca2b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6698961057625716530, guid: c40cae6f9715a42759b14c0803ebca2b, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
