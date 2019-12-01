@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+
 public class Fort : MonoBehaviour
 {
+    public StudioEventEmitter breakingSFX;
+
     private Animator animator;
 
     // Start is called before the first frame update
@@ -21,5 +25,6 @@ public class Fort : MonoBehaviour
     public void KnockOver()
     {
         animator.SetTrigger("Fall");
+        breakingSFX.Play();
     }
 }

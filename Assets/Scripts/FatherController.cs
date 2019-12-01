@@ -2,12 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+
 public class FatherController : MonoBehaviour
 {
     public GameObject toolbox;
     public GameObject musicbox;
     public Transform rightHand;
     public Transform pickUpMusicboxTransform;
+    public StudioEventEmitter walkingSFX;
+    public StudioEventEmitter crashingSFX;
+    public StudioEventEmitter confusedSFX;
+    public StudioEventEmitter interestedSFX;
+    public StudioEventEmitter shockedSFX;
+    public StudioEventEmitter satisfiedSFX;
+    public StudioEventEmitter grabObjectSFX;
+    public StudioEventEmitter grabObjectTadaSFX;
 
     private Animator animator;
     private Trashcan trashcan;
@@ -26,18 +36,21 @@ public class FatherController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!trashcan.IsUpright())
+        
+    }
+
+    public void Slip()
+    {
+        if (trashcan.canSlip)
         {
-            animator.SetBool("Slip", true);
-        }
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Slip"))
-        {
-            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.87)
-            {
-                fort.KnockOver();
-            }
+            animator.SetTrigger("Slip");
             trashcan.orangePeel.SetTrigger("Slip");
         }
+    }
+
+    public void KnockOverFort()
+    {
+        fort.KnockOver();
     }
 
     public void NoticeToolbox()
@@ -46,23 +59,29 @@ public class FatherController : MonoBehaviour
         {
             animator.SetTrigger("NoticeToolbox");
         }
+        interestedSFX.Play();
     }
 
     // this is called by the animation once the box has been grabbed
     public void GrabBox()
     {
+        toolbox.transform.position = rightHand.position;
         toolbox.transform.parent = rightHand;
         bookshelf.RemoveBox();
+        grabObjectTadaSFX.Play();
     }
 
     public void NoticeMusicbox()
     {
         animator.SetTrigger("NoticeMusicbox");
+        interestedSFX.Play();
     }
 
     // this is called by the animation once the musicbox has been grabbed
     public void GrabMusicbox()
     {
+        musicbox.transform.position = rightHand.position;
         musicbox.transform.parent = rightHand;
+        grabObjectTadaSFX.Play();
     }
 }

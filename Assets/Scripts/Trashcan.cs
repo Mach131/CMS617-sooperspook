@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+
 public class Trashcan : Clickable
 {
     public Animator orangePeel;
+    public bool canSlip = false;
+    public StudioEventEmitter fallingSFX;
+    public StudioEventEmitter shakingSFX;
 
     private bool isUpright = true;
     private Animator animator;
@@ -25,12 +30,23 @@ public class Trashcan : Clickable
     void Shake()
     {
         animator.SetTrigger("Shake");
+        shakingSFX.Play();
     }
 
     void KnockOver()
     {
         animator.SetTrigger("KnockOver");
         orangePeel.SetTrigger("FallOut");
+    }
+
+    public void PlayFallSFX()
+    {
+        fallingSFX.Play();
+    }
+
+    void EnableSlip()
+    {
+        canSlip = true;
     }
 
     protected override void OnClick()
