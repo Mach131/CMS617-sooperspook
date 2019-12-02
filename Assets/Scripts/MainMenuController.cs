@@ -56,4 +56,8 @@ public class MainMenuController : MonoBehaviour
             creditsPanelOpen = false;
         }
     }
+
+	public void OnQuitButtonPress() {
+		Application.Quit();
+	}
 }
