@@ -17,11 +17,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rBody; //it complains if you try to name this rigidbody
     private bool movingToTarget;
+    private Vector3 startPosition;
     private Vector3 targetPosition;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        startPosition = transform.position;
         this.rBody = transform.GetComponent<Rigidbody>();
         this.movingToTarget = false;
     }
@@ -31,10 +34,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = this.getInputVector() * this.speed;
         this.rBody.velocity = movement;
-        if (movement.magnitude > 0.1f)
-        {
-            transform.rotation = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z), Vector3.up);
-        }
+        //if (movement.magnitude > 0.1f)
+        //{
+        //    transform.rotation = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z), Vector3.up);
+        //}
 
         if (movingToTarget && (this.targetPosition - this.rBody.position).magnitude <= (this.speed * Time.deltaTime * 1.5))
         {
@@ -69,7 +72,15 @@ public class PlayerMovement : MonoBehaviour
      **/ 
     public void moveToPosition(Vector3 targetPosition)
     {
-        this.targetPosition = targetPosition;
-        this.movingToTarget = true;
+        transform.position = targetPosition;
+        //this.movingToTarget = true;
+        StartCoroutine(MoveBackToStart());
+    }
+
+    IEnumerator MoveBackToStart()
+    {
+        yield return new WaitForSeconds(0.5f);
+        transform.position = startPosition;
+        //this.movingToTarget = true;
     }
 }

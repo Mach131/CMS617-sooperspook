@@ -18,7 +18,7 @@ public class Clickable : MonoBehaviour
     // Start is called before the first frame update
     protected void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        player = FindObjectOfType<PlayerMovement>();
         finalPlayerPosition = transform.position + playerPosition;
     }
 
