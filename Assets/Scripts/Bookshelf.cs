@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+
 public class Bookshelf : Clickable
 {
     public Musicbox musicbox;
+
+    public StudioEventEmitter shakingSFX;
+    public StudioEventEmitter musicboxRollingSFX;
+    public StudioEventEmitter musicboxFallingSFX;
 
     private Animator animator;
     private bool hasToolbox = true;
@@ -27,6 +33,7 @@ public class Bookshelf : Clickable
             FindObjectOfType<FatherController>().NoticeToolbox();
         }
         animator.SetTrigger("Shake");
+        shakingSFX.Play();
     }
 
     public void RemoveBox()
@@ -43,5 +50,15 @@ public class Bookshelf : Clickable
     public void OnMusicboxFall()
     {
         musicbox.hasFallen = true;
+    }
+
+    public void PlayRollingSFX()
+    {
+        musicboxRollingSFX.Play();
+    }
+
+    public void PlayFallingSFX()
+    {
+        musicboxFallingSFX.Play();
     }
 }

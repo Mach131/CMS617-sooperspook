@@ -19,6 +19,7 @@ public class FatherController : MonoBehaviour
     public StudioEventEmitter satisfiedSFX;
     public StudioEventEmitter grabObjectSFX;
     public StudioEventEmitter grabObjectTadaSFX;
+    public StudioEventEmitter musicboxSFX;
 
     private Animator animator;
     private Trashcan trashcan;
@@ -84,6 +85,7 @@ public class FatherController : MonoBehaviour
         musicbox.transform.position = rightHand.position;
         musicbox.transform.parent = rightHand;
         grabObjectTadaSFX.Play();
+        musicboxSFX.Play();
         endingCutscene.SetActive(true);
     }
 }

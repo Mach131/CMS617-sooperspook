@@ -197,15 +197,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7013874061550163026, guid: 3ff9fdca6fed44366bdb8de20320c9f7,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 2105397347660686249, guid: 3ff9fdca6fed44366bdb8de20320c9f7,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013874061550163026, guid: 3ff9fdca6fed44366bdb8de20320c9f7,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff9fdca6fed44366bdb8de20320c9f7, type: 3}
@@ -480,31 +480,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6721009926252617898, guid: de952296eacfafb47b7682a86ca49cc8,
-        type: 3}
-      propertyPath: endingCutscene
-      value: 
-      objectReference: {fileID: 786708313}
     - target: {fileID: 5228297691772230, guid: de952296eacfafb47b7682a86ca49cc8, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3912790784931832786, guid: de952296eacfafb47b7682a86ca49cc8,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6310931726560040903, guid: de952296eacfafb47b7682a86ca49cc8,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8179897315384890245, guid: de952296eacfafb47b7682a86ca49cc8,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5264258325658082188, guid: de952296eacfafb47b7682a86ca49cc8,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -524,6 +504,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5264258325658082188, guid: de952296eacfafb47b7682a86ca49cc8,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310931726560040903, guid: de952296eacfafb47b7682a86ca49cc8,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179897315384890245, guid: de952296eacfafb47b7682a86ca49cc8,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721009926252617898, guid: de952296eacfafb47b7682a86ca49cc8,
+        type: 3}
+      propertyPath: endingCutscene
+      value: 
+      objectReference: {fileID: 786708313}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de952296eacfafb47b7682a86ca49cc8, type: 3}
 --- !u!1 &1704545650 stripped
@@ -705,11 +705,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransitionManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1130055160684996853, guid: 28d6430f4b0b23c4fb206e857033711f,
-        type: 3}
-      propertyPath: targetScene
-      value: MainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 1130055160684996852, guid: 28d6430f4b0b23c4fb206e857033711f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -764,6 +759,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130055160684996853, guid: 28d6430f4b0b23c4fb206e857033711f,
+        type: 3}
+      propertyPath: targetScene
+      value: MainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28d6430f4b0b23c4fb206e857033711f, type: 3}
