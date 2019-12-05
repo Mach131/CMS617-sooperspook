@@ -15,7 +15,8 @@ MonoBehaviour:
   Path: event:/trainFalling
   guid: 315daff89f505943b0a885c4b688aa63
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -84,6 +85,24 @@ MonoBehaviour:
   - Name: 
     Value: 788
   Exists: 1
+--- !u!114 &-8484085361780696979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ./Assets/Audio/Master/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637108042280000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8460454415349335879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +118,8 @@ MonoBehaviour:
   Path: event:/bookshelfShaking
   guid: a49ce38f7cd50d438dce3cecc50a37f1
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -122,7 +142,8 @@ MonoBehaviour:
   Path: event:/fortBreaking
   guid: 8439167e201c6949b2e6db7fcc3ffbee
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -145,7 +166,8 @@ MonoBehaviour:
   Path: event:/musicboxFalling
   guid: f2472239007ae0448fb1b86d148c473e
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -168,7 +190,8 @@ MonoBehaviour:
   Path: event:/trainChooChoo
   guid: 3cee6d605fdbc34dbdff6b65a1d6003e
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -214,7 +237,8 @@ MonoBehaviour:
   Path: event:/grabbingObjectTada
   guid: eebf0713b45fce4e98efa747b5c87ddc
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -255,7 +279,8 @@ MonoBehaviour:
   Path: event:/coatRackTilting
   guid: cc07fc9e6dfb0f419450dce6b348b344
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -316,7 +341,8 @@ MonoBehaviour:
   Path: event:/grabbingObject
   guid: 2f2e395865936e478cbb83b360adbbdd
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -357,7 +383,8 @@ MonoBehaviour:
   Path: event:/cutsceneMusic
   guid: 0446b739dc847d42a0a01fae71fb48ef
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -403,7 +430,8 @@ MonoBehaviour:
   Path: event:/musicboxRolling
   guid: a9c5fec6137e7a4ca513e33b9866ac0c
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -426,7 +454,8 @@ MonoBehaviour:
   Path: event:/trashcanFalling
   guid: 883558a83d93e5419772ada13dae613d
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -469,7 +498,8 @@ MonoBehaviour:
   Path: event:/ghostWhoosh
   guid: 2696a68b8caa7047b01314ebafd78d40
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -492,7 +522,8 @@ MonoBehaviour:
   Path: event:/dadConfused
   guid: 1cdf793c9f749542a0498b583e539174
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -538,7 +569,8 @@ MonoBehaviour:
   Path: event:/dadShocked
   guid: 0502c5fe386e3f43ac2f9bf5f3e2a688
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -561,7 +593,8 @@ MonoBehaviour:
   Path: event:/dadInterested
   guid: 5c7f895ce73d444fbd9f9435c1da00eb
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -603,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5745106390275383116}
-  - {fileID: 8203472416543168783}
+  - {fileID: 953216258897383702}
   EditorEvents:
   - {fileID: 3115040474234626754}
   - {fileID: 7096850160991444240}
@@ -634,10 +667,10 @@ MonoBehaviour:
   - {fileID: -4315385611290647484}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8203472416543168783}
+  - {fileID: 953216258897383702}
   StringsBanks:
   - {fileID: 5745106390275383116}
-  stringsBankWriteTime: 637109026362758945
+  stringsBankWriteTime: 637108042280000000
   cacheVersion: 3
 --- !u!114 &693174355543884859
 MonoBehaviour:
@@ -654,7 +687,8 @@ MonoBehaviour:
   Path: event:/walking
   guid: 29fc6cadea79844b95507c8543eb7d73
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -698,6 +732,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &953216258897383702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ./Assets/Audio/Master/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637108042280000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &1266514104516518504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,7 +765,8 @@ MonoBehaviour:
   Path: event:/coatFalling
   guid: dd012457d28230498f59a4dc6537d0e5
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -790,7 +843,8 @@ MonoBehaviour:
   Path: event:/trainGoing
   guid: 7b6c38124da7f04eac2f96e2df747e1c
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -849,7 +903,8 @@ MonoBehaviour:
   Path: event:/tableShake
   guid: b68444a7a3d59645a3ffb15c37f22fae
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -910,7 +965,8 @@ MonoBehaviour:
   Path: event:/menuMusic
   guid: d7a919e30e138f4799b49ed580b5c731
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -933,7 +989,8 @@ MonoBehaviour:
   Path: event:/dadSatisfied
   guid: e8a5fb6114194b4f8151f949b0a253ae
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -955,7 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ./Assets/Audio/Master/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637109026362758945
+  lastModified: 637108042280000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -976,7 +1033,8 @@ MonoBehaviour:
   Path: event:/trashcanShaking
   guid: f1f1c00911bfa74d83cddc1dcdb042e5
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -999,7 +1057,8 @@ MonoBehaviour:
   Path: event:/dadCrashing
   guid: 36730023e1232a47b9640e1625d6d121
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1022,7 +1081,8 @@ MonoBehaviour:
   Path: event:/bedSheets
   guid: ed8bc0ea26f6734aa3bced3b37e054a9
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1081,7 +1141,8 @@ MonoBehaviour:
   Path: event:/animalSqueaking
   guid: bccbff78ddaf014387d9a5bd1d4b0631
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1142,7 +1203,8 @@ MonoBehaviour:
   Path: event:/musicboxPlaying
   guid: 2c64dd5c0e6b9941a4eda7c21f6d6ba6
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1183,7 +1245,8 @@ MonoBehaviour:
   Path: event:/levelMusic
   guid: 5d3e14ec87dce34092bdd204222e4cc9
   Banks:
-  - {fileID: 8203472416543168783}
+  - {fileID: -8484085361780696979}
+  - {fileID: 953216258897383702}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
