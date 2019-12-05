@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PauseMenuController : MonoBehaviour
 {
-    private static string gameSceneName = "DefaultScene";
+    private static string gameSceneName = "MainScene";
     private bool creditsPanelOpen;
 
     public Button[] mainMenuButtons;

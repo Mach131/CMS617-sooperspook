@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
-    private static string gameSceneName = "DefaultScene";
     private bool creditsPanelOpen;
 
     public Button[] mainMenuButtons;
     public GameObject creditsPanel;
+    public SceneTransitionManager sceneTransitionManager;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class MainMenuController : MonoBehaviour
     // Transitions to the main game scene.
     public void OnStartButtonPress()
     {
-        SceneManager.LoadScene(gameSceneName);
+        sceneTransitionManager.transitionToScene();
     }
 
     // Opens the credits panel, if it is not already open.

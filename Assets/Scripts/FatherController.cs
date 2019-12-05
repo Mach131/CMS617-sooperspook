@@ -8,6 +8,7 @@ public class FatherController : MonoBehaviour
 {
     public GameObject toolbox;
     public GameObject musicbox;
+    public GameObject endingCutscene;
     public Transform rightHand;
     public Transform pickUpMusicboxTransform;
     public StudioEventEmitter walkingSFX;
@@ -83,5 +84,6 @@ public class FatherController : MonoBehaviour
         musicbox.transform.position = rightHand.position;
         musicbox.transform.parent = rightHand;
         grabObjectTadaSFX.Play();
+        endingCutscene.SetActive(true);
     }
 }

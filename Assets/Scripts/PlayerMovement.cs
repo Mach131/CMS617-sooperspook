@@ -34,10 +34,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = this.getInputVector() * this.speed;
         this.rBody.velocity = movement;
-        //if (movement.magnitude > 0.1f)
-        //{
-        //    transform.rotation = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z), Vector3.up);
-        //}
+        if (movement.magnitude > 0.1f)
+        {
+            transform.rotation = Quaternion.LookRotation(new Vector3(movement.x, 0, movement.z), Vector3.up);
+        }
 
         if (movingToTarget && (this.targetPosition - this.rBody.position).magnitude <= (this.speed * Time.deltaTime * 1.5))
         {
@@ -72,15 +72,17 @@ public class PlayerMovement : MonoBehaviour
      **/ 
     public void moveToPosition(Vector3 targetPosition)
     {
-        transform.position = targetPosition;
-        //this.movingToTarget = true;
+        //transform.position = targetPosition;
+        this.targetPosition = targetPosition;
+        this.movingToTarget = true;
         StartCoroutine(MoveBackToStart());
     }
 
     IEnumerator MoveBackToStart()
     {
         yield return new WaitForSeconds(0.5f);
-        transform.position = startPosition;
-        //this.movingToTarget = true;
+        //transform.position = startPosition;
+        this.targetPosition = startPosition;
+        this.movingToTarget = true;
     }
 }

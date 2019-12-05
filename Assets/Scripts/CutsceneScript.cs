@@ -6,7 +6,7 @@ using UnityEngine.Playables;
 
 public class CutsceneScript : MonoBehaviour, IPausable
 {
-	public PlayableDirector director;
+	private PlayableDirector director;
 
     // Start is called before the first frame update
     void Awake()
