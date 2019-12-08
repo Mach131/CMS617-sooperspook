@@ -9,7 +9,7 @@ public class CutsceneScript : MonoBehaviour, IPausable
 	private PlayableDirector director;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
 		director = GetComponent<PlayableDirector>();
 		SceneDirector.GetPrimary().Register(this);
