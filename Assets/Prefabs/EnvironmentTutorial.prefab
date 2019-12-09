@@ -4476,11 +4476,6 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6460548169098288528, guid: 95e3ae106e23840edb46fd1945d095e0,
         type: 3}
-      propertyPath: m_InitialState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460548169098288528, guid: 95e3ae106e23840edb46fd1945d095e0,
-        type: 3}
       propertyPath: m_SceneBindings.Array.data[4].value
       value: 
       objectReference: {fileID: 8268981914149568251}
