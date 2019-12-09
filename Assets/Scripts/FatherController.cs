@@ -97,4 +97,9 @@ public class FatherController : MonoBehaviour
     {
         //shockedSFX.Play();
     }
+
+    public void StartPacing()
+    {
+        animator.SetTrigger("StartPacing");
+    }
 }
