@@ -4387,11 +4387,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndsceneManager
       objectReference: {fileID: 0}
-    - target: {fileID: 504826871074665750, guid: 95e3ae106e23840edb46fd1945d095e0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3583909079217900141, guid: 95e3ae106e23840edb46fd1945d095e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4450,7 +4445,7 @@ PrefabInstance:
     - target: {fileID: 6460548169098288528, guid: 95e3ae106e23840edb46fd1945d095e0,
         type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6460548169098288528, guid: 95e3ae106e23840edb46fd1945d095e0,
         type: 3}
@@ -4473,6 +4468,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -9174917798101758233, guid: c40cae6f9715a42759b14c0803ebca2b,
         type: 2}
+    - target: {fileID: 6460548169098288528, guid: 95e3ae106e23840edb46fd1945d095e0,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].key
+      value: 
+      objectReference: {fileID: 2333206442183264898, guid: c40cae6f9715a42759b14c0803ebca2b,
+        type: 2}
+    - target: {fileID: 6460548169098288528, guid: 95e3ae106e23840edb46fd1945d095e0,
+        type: 3}
+      propertyPath: m_InitialState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460548169098288528, guid: 95e3ae106e23840edb46fd1945d095e0,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].value
+      value: 
+      objectReference: {fileID: 8268981914149568251}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95e3ae106e23840edb46fd1945d095e0, type: 3}
 --- !u!1 &5897919360402003884 stripped
