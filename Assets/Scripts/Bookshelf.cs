@@ -4,7 +4,7 @@ using UnityEngine;
 
 using FMODUnity;
 
-public class Bookshelf : Clickable
+public class Bookshelf : Clickable, IPausable
 {
     public Musicbox musicbox;
 
@@ -15,10 +15,15 @@ public class Bookshelf : Clickable
     private Animator animator;
     private bool hasToolbox = true;
 
+    private const float full_playback_speed = 1.0f;
+
     new protected void Start()
     {
         base.Start();
         animator = GetComponent<Animator>();
+
+        // Register this object for pause/unpause updates
+        SceneDirector.GetPrimary().Register(this);
     }
 
     new protected void Update()
@@ -60,5 +65,17 @@ public class Bookshelf : Clickable
     public void PlayFallingSFX()
     {
         musicboxFallingSFX.Play();
+    }
+
+    // Freeze all animations in-place when paused
+    public void OnPause()
+    {
+        animator.speed = 0.0f;
+    }
+
+    // Resume all animations from where they were on resume
+    public void OnResume()
+    {
+        animator.speed = full_playback_speed;
     }
 }

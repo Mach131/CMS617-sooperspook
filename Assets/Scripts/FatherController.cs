@@ -4,7 +4,7 @@ using UnityEngine;
 
 using FMODUnity;
 
-public class FatherController : MonoBehaviour
+public class FatherController : MonoBehaviour, IPausable
 {
     public GameObject toolbox;
     public GameObject musicbox;
@@ -27,6 +27,8 @@ public class FatherController : MonoBehaviour
     private Fort fort;
     private Bookshelf bookshelf;
 
+    private const float full_playback_speed = 1.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,9 @@ public class FatherController : MonoBehaviour
         trashcan = FindObjectOfType<Trashcan>();
         fort = FindObjectOfType<Fort>();
         bookshelf = FindObjectOfType<Bookshelf>();
+
+        // Register this object for pause/unpause updates
+        SceneDirector.GetPrimary().Register(this);
     }
 
     // Update is called once per frame
@@ -96,5 +101,22 @@ public class FatherController : MonoBehaviour
     public void PlayShockedSFX()
     {
         //shockedSFX.Play();
+    }
+
+    public void StartPacing()
+    {
+        animator.SetTrigger("StartPacing");
+    }
+
+    // Freeze all animations in-place when paused
+    public void OnPause()
+    {
+        animator.speed = 0.0f;
+    }
+
+    // Resume all animations from where they were on resume
+    public void OnResume()
+    {
+        animator.speed = full_playback_speed;
     }
 }

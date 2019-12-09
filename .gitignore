@@ -35,3 +35,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Unity machine-specific quality settings
+ProjectSettings/QualitySettings.asset
+
+# locally-generated FMOD
+fmod_editor.log
+Assets/Plugins/FMOD/Resources/FMODStudioCache.asset
