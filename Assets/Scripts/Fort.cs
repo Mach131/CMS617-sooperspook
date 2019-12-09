@@ -27,4 +27,9 @@ public class Fort : MonoBehaviour
         animator.SetTrigger("Fall");
         breakingSFX.Play();
     }
+
+    public void Fix()
+    {
+        animator.SetTrigger("Fix");
+    }
 }

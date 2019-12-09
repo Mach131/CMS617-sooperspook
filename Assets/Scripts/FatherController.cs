@@ -8,6 +8,7 @@ public class FatherController : MonoBehaviour, IPausable
 {
     public GameObject toolbox;
     public GameObject musicbox;
+    public GameObject invisibleMusicbox;
     public GameObject endingCutscene;
     public Transform rightHand;
     public Transform pickUpMusicboxTransform;
@@ -75,7 +76,7 @@ public class FatherController : MonoBehaviour, IPausable
     public void GrabBox()
     {
         toolbox.transform.position = rightHand.position;
-        toolbox.transform.parent = rightHand;
+        toolbox.transform.SetParent(rightHand);
         bookshelf.RemoveBox();
         grabObjectTadaSFX.Play();
         levelMusic.SetParameter("Progress", 2);
@@ -90,8 +91,10 @@ public class FatherController : MonoBehaviour, IPausable
     // this is called by the animation once the musicbox has been grabbed
     public void GrabMusicbox()
     {
-        musicbox.transform.position = rightHand.position;
-        musicbox.transform.parent = rightHand;
+        //musicbox.transform.position = rightHand.position;
+        //musicbox.transform.SetParent(rightHand);
+        musicbox.SetActive(false);
+        invisibleMusicbox.SetActive(true);
         grabObjectTadaSFX.Play();
         //musicboxSFX.Play();
         levelMusic.SetParameter("Progress", 3);
@@ -106,6 +109,13 @@ public class FatherController : MonoBehaviour, IPausable
     public void StartPacing()
     {
         animator.SetTrigger("StartPacing");
+    }
+
+    public void FixFort()
+    {
+        toolbox.transform.SetParent(null);
+        toolbox.GetComponent<Rigidbody>().isKinematic = false;
+        fort.Fix();
     }
 
     // Freeze all animations in-place when paused
