@@ -783,7 +783,7 @@ MonoBehaviour:
   m_Position: {x: 0, y: 0, z: 0}
   m_EulerAngles: {x: 0, y: 0, z: 0}
   m_UseTrackMatchFields: 1
-  m_MatchTargetFields: 63
+  m_MatchTargetFields: 59
   m_RemoveStartOffset: 0
   m_ApplyFootIK: 1
   m_Loop: 0
