@@ -6,6 +6,7 @@ using UnityEngine.Playables;
 
 public class CutsceneScript : MonoBehaviour, IPausable
 {
+    public bool endingCutscene = false;
 	private PlayableDirector director;
 
     // Start is called before the first frame update
@@ -13,6 +14,10 @@ public class CutsceneScript : MonoBehaviour, IPausable
     {
 		director = GetComponent<PlayableDirector>();
 		SceneDirector.GetPrimary().Register(this);
+        if (endingCutscene)
+        {
+            FindObjectOfType<PlayerMovement>().DisableMovement();
+        }
     }
 
 	public void StartFresh() {

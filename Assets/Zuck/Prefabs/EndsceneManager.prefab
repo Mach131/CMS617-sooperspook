@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215adc1680c7e3140af1f302b52b6fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  director: {fileID: 0}
+  endingCutscene: 1
 --- !u!320 &6460548169098288528
 PlayableDirector:
   m_ObjectHideFlags: 0

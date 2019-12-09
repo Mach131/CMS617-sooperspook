@@ -85,4 +85,16 @@ public class PlayerMovement : MonoBehaviour
         this.targetPosition = startPosition;
         this.movingToTarget = true;
     }
+
+    public void DisableMovement()
+    {
+        transform.position = startPosition;
+        transform.rotation = Quaternion.identity;
+        enabled = false;
+    }
+
+    public void EnableMovement()
+    {
+        enabled = true;
+    }
 }
