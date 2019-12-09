@@ -20,6 +20,7 @@ public class FatherController : MonoBehaviour
     public StudioEventEmitter grabObjectSFX;
     public StudioEventEmitter grabObjectTadaSFX;
     public StudioEventEmitter musicboxSFX;
+    public StudioEventEmitter levelMusic;
 
     private Animator animator;
     private Trashcan trashcan;
@@ -53,6 +54,7 @@ public class FatherController : MonoBehaviour
     public void KnockOverFort()
     {
         fort.KnockOver();
+        levelMusic.SetParameter("Progress", 1);
     }
 
     public void NoticeToolbox()
@@ -71,6 +73,7 @@ public class FatherController : MonoBehaviour
         toolbox.transform.parent = rightHand;
         bookshelf.RemoveBox();
         grabObjectTadaSFX.Play();
+        levelMusic.SetParameter("Progress", 2);
     }
 
     public void NoticeMusicbox()
@@ -85,7 +88,13 @@ public class FatherController : MonoBehaviour
         musicbox.transform.position = rightHand.position;
         musicbox.transform.parent = rightHand;
         grabObjectTadaSFX.Play();
-        musicboxSFX.Play();
+        //musicboxSFX.Play();
+        levelMusic.SetParameter("Progress", 3);
         endingCutscene.SetActive(true);
+    }
+
+    public void PlayShockedSFX()
+    {
+        //shockedSFX.Play();
     }
 }
