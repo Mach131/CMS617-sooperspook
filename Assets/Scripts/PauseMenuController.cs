@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class PauseMenuController : MonoBehaviour
+public class PauseMenuController : MonoBehaviour, IPausable
 {
     private static string gameSceneName = "MainScene";
     private bool creditsPanelOpen;
@@ -16,7 +16,10 @@ public class PauseMenuController : MonoBehaviour
     void Start()
     {
         creditsPanelOpen = false;
-    }
+
+		// Register this object for pause/unpause updates
+		SceneDirector.GetPrimary().Register(this);
+	}
 
     // Transitions to the main game scene.
     public void OnStartButtonPress()
@@ -57,7 +60,20 @@ public class PauseMenuController : MonoBehaviour
         }
     }
 
-	public void OnQuitButtonPress() {
+	public void OnResumeButtonPress() {
+		SceneDirector.GetPrimary().Resume();
+	}
+
+	public void OnQuitToDeskButtonPress() {
 		Application.Quit();
+	}
+
+	
+	public void OnPause() {
+		
+	}
+
+	public void OnResume() {
+		
 	}
 }
