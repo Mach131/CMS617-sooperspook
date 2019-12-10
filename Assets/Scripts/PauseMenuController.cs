@@ -7,16 +7,10 @@ using UnityEngine.EventSystems;
 
 public class PauseMenuController : MonoBehaviour, IPausable
 {
-    private static string gameSceneName = "MainScene";
+    private static string mainMenuSceneName = "MainMenu";
 
-    [SerializeField] private Canvas canvas;
-    [SerializeField] private GraphicRaycaster graphicRaycaster;
-
-    void Awake()
-    {
-        //canvas = GetComponent<Canvas>();
-        //graphicRaycaster = GetComponent<GraphicRaycaster>();
-    }
+    public Canvas canvas;
+    public GraphicRaycaster graphicRaycaster;
 
     // Start is called before the first frame update
     void Start()
@@ -25,18 +19,18 @@ public class PauseMenuController : MonoBehaviour, IPausable
 		SceneDirector.GetPrimary().Register(this);
 	}
 
-    // Transitions to the main game scene.
-    public void OnStartButtonPress()
-    {
-        SceneManager.LoadScene(gameSceneName);
-    }
-
 	public void OnResumeButtonPress() {
-        Debug.Log("Resume");
 		SceneDirector.GetPrimary().Resume();
 	}
 
-	public void OnQuitToDeskButtonPress() {
+    // Transitions to the main menu scene.
+    public void OnQuitToMainButtonPress()
+    {
+        SceneManager.LoadScene(mainMenuSceneName);
+    }
+
+    public void OnQuitToDeskButtonPress() {
+        Debug.Log("Quitting to Desktop");
 		Application.Quit();
 	}
 
@@ -44,16 +38,12 @@ public class PauseMenuController : MonoBehaviour, IPausable
     {
         canvas.enabled = false;
         graphicRaycaster.enabled = false;
-        //canvas.gameObject.SetActive(false);
-        //graphicRaycaster.gameObject.SetActive(false);
     }
 
     private void Reveal()
     {
         canvas.enabled = true;
         graphicRaycaster.enabled = true;
-        //canvas.gameObject.SetActive(true);
-        //graphicRaycaster.gameObject.SetActive(true);
     }
 	
 	public void OnPause() {
